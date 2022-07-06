@@ -1,0 +1,85 @@
+header{
+    height: 230px;
+}
+
+#link-header{
+    height: 60px;
+    display: flex;    
+    justify-content: space-between;
+    backdrop-filter: brightness(90%);
+    padding: 0.5rem 2rem;
+    & .one, .one a {
+        color: $color2;
+    }
+
+    & .two, .two a {
+        color: $color1;
+        font-weight: 800;
+    }
+}
+
+#navbar{
+    position: relative;
+    background: white;
+    height: 170px;
+    z-index: 0;
+    overflow: hidden;
+     }
+
+#logo {
+    @include center;
+    height: 100px;
+        & img {
+            position: relative;
+            z-index: -1;
+            margin-top: 1.3rem;
+            width: 7%;
+            transform: rotate(45deg);
+        }
+        }
+   
+.navLinks{
+    @include center;
+    height: 60px;
+}
+
+
+.btn{
+    color: $color1;
+    transition: 0.3s linear;
+    position: relative;
+    margin: 0.5rem;
+    padding: 0.6rem;
+    font-weight: 600;
+    font-size: large;
+    font-family: "Amethysta", serif;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px #878787, -5px -5px 10px #ffffff;
+        &:hover {
+        color: white;
+      } 
+       
+      }
+.btn::before {
+            position: absolute;
+            height: 100%;
+            overflow: hidden;
+            width: 0%;
+            opacity: 0;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            transition: 0.3s linear;
+            content: "";
+            left: 50%;
+            top: 50%;
+                          
+        } 
+        
+        
+.btn:hover::before{
+     border-radius: 5px;
+     background: $color1;
+     color: white;
+     width: 100%;
+     height: 100%;
+     opacity: 1; }

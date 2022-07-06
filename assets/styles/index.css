@@ -1,0 +1,202 @@
+@font-face {
+  font-family: "font1";
+  src: url();
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  background: -webkit-gradient(linear, left top, right top, color-stop(40%, #1c2c68), color-stop(70%, #8dba19));
+  background: linear-gradient(90deg, #1c2c68 40%, #8dba19 70%);
+}
+
+header {
+  height: 230px;
+}
+
+#link-header {
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-backdrop-filter: brightness(90%);
+          backdrop-filter: brightness(90%);
+  padding: 0.5rem 2rem;
+}
+
+#link-header .one, #link-header .one a {
+  color: #8dba19;
+}
+
+#link-header .two, #link-header .two a {
+  color: #1c2c68;
+  font-weight: 800;
+}
+
+#navbar {
+  position: relative;
+  background: white;
+  height: 170px;
+  z-index: 0;
+  overflow: hidden;
+}
+
+#logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+}
+
+#logo img {
+  position: relative;
+  z-index: -1;
+  margin-top: 1.3rem;
+  width: 7%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.navLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+}
+
+.btn {
+  color: #1c2c68;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  position: relative;
+  margin: 0.5rem;
+  padding: 0.6rem;
+  font-weight: 600;
+  font-size: large;
+  font-family: "Amethysta", serif;
+  border-radius: 5px;
+  -webkit-box-shadow: 5px 5px 10px #878787, -5px -5px 10px #ffffff;
+          box-shadow: 5px 5px 10px #878787, -5px -5px 10px #ffffff;
+}
+
+.btn:hover {
+  color: white;
+}
+
+.btn::before {
+  position: absolute;
+  height: 100%;
+  overflow: hidden;
+  width: 0%;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  content: "";
+  left: 50%;
+  top: 50%;
+}
+
+.btn:hover::before {
+  border-radius: 5px;
+  background: #1c2c68;
+  color: white;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+#accueil {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 60vh;
+  background: url(/assets/img/boulangegrand.jpg) center;
+  background-size: 50%;
+  background-position: left;
+}
+
+#accueil:hover img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+#photo-accueil {
+  overflow: hidden;
+  width: 50%;
+  height: 100%;
+}
+
+#photo-accueil img {
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#name {
+  width: 50%;
+  height: 60vh;
+  -webkit-backdrop-filter: blur(20px) brightness(30%);
+          backdrop-filter: blur(20px) brightness(30%);
+}
+
+#svgName {
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#svgAnim path {
+  stroke: #8dba19;
+}
+
+#slogan {
+  margin-top: 2rem;
+  color: #8dba19;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 20%;
+}
+/*# sourceMappingURL=index.css.map */
