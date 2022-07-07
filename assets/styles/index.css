@@ -13,6 +13,7 @@
 }
 
 html {
+  overflow-x: hidden;
   background: -webkit-gradient(linear, left top, right top, color-stop(40%, #1c2c68), color-stop(70%, #8dba19));
   background: linear-gradient(90deg, #1c2c68 40%, #8dba19 70%);
 }
@@ -67,10 +68,9 @@ header {
 #logo img {
   position: relative;
   z-index: -1;
-  margin-top: 1.3rem;
-  width: 7%;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  margin-top: 20px;
+  -webkit-transform: rotate(45deg) scale(0.3);
+          transform: rotate(45deg) scale(0.3);
 }
 
 .navLinks {
@@ -136,7 +136,9 @@ header {
   display: flex;
   width: 100vw;
   height: 60vh;
-  background: url(/assets/img/boulangegrand.jpg) center;
+  background: url(/assets/img/textile.jpg) center/cover;
+  cursor: -webkit-grab;
+  cursor: grab;
   background-size: 50%;
   background-position: left;
 }
@@ -162,6 +164,8 @@ header {
 }
 
 #name {
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
   width: 50%;
   height: 60vh;
   -webkit-backdrop-filter: blur(20px) brightness(30%);
@@ -198,5 +202,32 @@ header {
       -ms-flex-align: start;
           align-items: flex-start;
   height: 20%;
+  text-align: center;
+  -webkit-animation: letter 10s infinite;
+          animation: letter 10s infinite;
+}
+
+@-webkit-keyframes letter {
+  0% {
+    letter-spacing: normal;
+  }
+  50% {
+    letter-spacing: 1px;
+  }
+  100% {
+    letter-spacing: normal;
+  }
+}
+
+@keyframes letter {
+  0% {
+    letter-spacing: normal;
+  }
+  50% {
+    letter-spacing: 1px;
+  }
+  100% {
+    letter-spacing: normal;
+  }
 }
 /*# sourceMappingURL=index.css.map */

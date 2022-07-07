@@ -24,5 +24,6 @@ $font1: "font1", sans-serif;
 }
 
 html{
+    overflow-x: hidden;
     background: linear-gradient(90deg, $color1 40%, $color2 70%);
 }

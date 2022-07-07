@@ -2,7 +2,8 @@
     display: flex;
     width: 100vw;
     height: 60vh;
-    background: url(/assets/img/boulangegrand.jpg) center;
+    background: url(/assets/img/textile.jpg) center/cover;
+    cursor: grab;
     background-size: 50%;
     background-position: left;
     &:hover img {
@@ -23,6 +24,7 @@
 }
 
 #name{
+    transition: 0.2s linear;
     width: 50%;
     height: 60vh;
     backdrop-filter: blur(20px) brightness(30%);
@@ -47,4 +49,19 @@
     justify-content: center;
     align-items: flex-start;
     height: 20%;
+    text-align: center;
+    animation: letter 10s infinite ;
+}
+
+@keyframes letter {
+    0% {
+        letter-spacing: normal;
+    }
+    50% {
+        letter-spacing: 1px;
+    }
+    100% {
+        letter-spacing: normal;
+    }
+   
 }
