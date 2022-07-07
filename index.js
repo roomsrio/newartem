@@ -13,13 +13,14 @@ const name = document.getElementById("name");
 accueil.addEventListener("mousemove", (e) => {
   name.style.position = "absolute";
   if (
-    (e.pageX <= window.innerWidth * 0.75) &
-    (e.pageX >= window.innerWidth * 0.25)
+    (e.pageX <= (window.innerWidth * 0.75)) &
+    (e.pageX >= (window.innerWidth * 0.25))
   ) {
     name.style.left = `calc(${e.pageX}px - 25vw)`;
-  } else if (e.pageX >= window.innerWidth * 0.75) {
-    name.style.right = 0;
+  } else if(e.pageX >= (window.innerWidth * 0.75)){
+    name.style.left = window.innerWidth * 0.75;
   } else {
-    name.style.left = 0;
+    name.style.left = window.innerWidth * 0.25;
+
   }
 });
