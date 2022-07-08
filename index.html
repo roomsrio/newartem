@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="./assets/styles/index.css">
     <link rel="shortcut icon" href="./assets/img/logo carre.jpg">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
-		integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <header>
 
@@ -20,8 +20,10 @@
             <p>Contactez-nous</p>
             <a href="mailto:com@artem-fr.com">&#128231; com@artem-fr.com</a>
         </div>
-        <div class="item two"><a href="tel:+33164110033">&#9990; +33 1 64 11 00 33</a><br>du lundi au vendredi
-            9h-13h 14h-18h </div>
+        <div class="item two"><a href="tel:+33164110033">&#9990; +33 1 64 11 00 33</a>
+            <p>du lundi au vendredi
+                9h-13h 14h-18h</p>
+        </div>
     </div>
 
     <div id="navbar">
@@ -29,6 +31,9 @@
             <img src="./assets/img/logo carre.jpg" alt="logo artem">
         </div>
         <nav>
+            <button class="burger">
+                <span class="bar"></span>
+            </button>
             <ul class="navLinks">
                 <li class="navLink 1"><a class="btn presentation" href="#presentation">Présentation</a></li>
                 <li class="navLink 2"><a class="btn produits" href="#produits">Nos produits</a></li>
@@ -44,7 +49,8 @@
 </header>
 
 <section id="accueil">
-    <div id="photo-accueil"><img src="./assets/img/boulangegrand.jpg" alt="photo de boulangerie"></div>
+    <div id="photo-left"><img src="./assets/img/boulangegrand.jpg" alt="photo de boulangerie"></div>
+    <div id="photo-right"><img src="./assets/img/textile.jpg" alt="photo de textiles"></div>
     <div id="name">
         <div id="svgName">
             <svg id="svgAnim" width="401" height="72" viewBox="0 0 401 73" fill="none"

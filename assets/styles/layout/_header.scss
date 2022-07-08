@@ -10,12 +10,31 @@ header{
     padding: 0.5rem 2rem;
     & .one, .one a {
         color: $color2;
+        @media screen and (max-width: 600px) {
+            color: white;
+            font-weight: 400;
+         }
+         
     }
 
     & .two, .two a {
         color: $color1;
         font-weight: 800;
+        @media screen and (max-width: 600px) {
+           text-align: right;
+           color: white;
+           font-weight: 400;
+        }
     }
+
+    & p, br {
+        @media screen and (max-width: 600px) {
+           display: none;
+         }
+    }
+    @media screen and (max-width: 380px) {
+                display: block;
+            }
 }
 
 #navbar{
@@ -36,10 +55,17 @@ header{
             transform: rotate(45deg) scale(0.3);
         }
         }
-   
+
+.burger {
+    display: none
+}
+
 .navLinks{
     @include center;
     height: 60px;
+    @media screen and (max-width: 600px) {
+        display: none;
+      }
 }
 
 
