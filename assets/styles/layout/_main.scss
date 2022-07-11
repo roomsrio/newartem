@@ -1,0 +1,35 @@
+main {
+    width: 100%;
+
+}
+
+
+.part{
+    @include center;
+    height: 96vh;
+    background: whitesmoke;
+}
+
+.imgMenu img, .lottie{
+    margin: 30px;
+    border: 1px solid #8dba19;
+  padding: 10px;
+  width: 25rem;
+  height: 25rem;
+}
+
+
+#presentation {
+    clip-path: polygon(0 0,100% 0,100% 100%,0 calc(100% - 50px));
+}
+
+
+#produits{
+    clip-path: polygon(0 0,100% 50px,100% 100%,0 100%);
+    margin-top: -30px;
+}
+
+#contact{
+    clip-path: polygon(0 0,calc(50% - 0.67vh - 8.58vh) 0,50% calc(4vh + 0.31vh),calc(50% + 0.67vh + 8.58vh) 0,100% 0,100% 100%,0 100%);
+    margin-top: -1vh;
+}

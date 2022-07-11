@@ -1,12 +1,11 @@
 header{
-    height: 230px;
+    height: 32vh;
 }
 
 #link-header{
-    height: 60px;
+    height: 9vh;
     display: flex;    
     justify-content: space-between;
-    backdrop-filter: brightness(90%);
     padding: 0.5rem 2rem;
     & .one, .one a {
         color: $color2;
@@ -40,18 +39,20 @@ header{
 #navbar{
     position: relative;
     background: white;
-    height: 170px;
+    height: 23vh;
     z-index: 0;
     overflow: hidden;
+    display: grid;
+    align-items: center;
      }
 
 #logo {
     @include center;
-    height: 100px;
+    height: 6vh;
         & img {
             position: relative;
             z-index: -1;
-            margin-top: 20px;
+            margin-top: 40px;
             transform: rotate(45deg) scale(0.3);
         }
         }
@@ -72,8 +73,9 @@ header{
 .btn{
     color: $color1;
     transition: 0.3s linear;
+    transition: box-shadow 0.5s linear;
     position: relative;
-    margin: 0.5rem;
+    margin: 0 0.8rem;
     padding: 0.6rem;
     font-weight: 600;
     font-size: large;
@@ -82,6 +84,8 @@ header{
     box-shadow: 5px 5px 10px #878787, -5px -5px 10px #ffffff;
         &:hover {
         color: white;
+        box-shadow: inset 20px 20px 14px #182558,
+            inset -20px -20px 14px #203378;
       } 
        
       }

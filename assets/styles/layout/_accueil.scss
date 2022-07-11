@@ -2,9 +2,10 @@
     position: relative;
     display: flex;
     width: 100vw;
-    height: 60vh;
+    height: 55vh;
     cursor: grab;
     background-position: left;
+    box-shadow: 2px 5px 5px 1px rgba(0,0,0,0.62);
     &:hover img {
         transform: scale(1.05);
     }
@@ -49,11 +50,10 @@
     #name{
     position: absolute;
     transition: 0.2s linear;
+    background: rgba(0, 0, 0, 0.716);
     right: 0;
     width: 50%;
-    height: 60vh;
-    backdrop-filter: blur(20px) brightness(30%);
-    -webkit-backdrop-filter: blur(20px) brightness(30%);
+    height: 55vh;
     @media screen and (max-width: 1093px) {
         height: 40vh;
   }
@@ -102,4 +102,10 @@
         letter-spacing: normal;
     }
    
+}
+
+#scrollDown{
+    display: block;
+    margin: auto;
+    height: 13vh;
 }

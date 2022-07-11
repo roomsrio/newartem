@@ -19,19 +19,17 @@ html {
 }
 
 header {
-  height: 230px;
+  height: 32vh;
 }
 
 #link-header {
-  height: 60px;
+  height: 9vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-backdrop-filter: brightness(90%);
-          backdrop-filter: brightness(90%);
   padding: 0.5rem 2rem;
 }
 
@@ -74,9 +72,14 @@ header {
 #navbar {
   position: relative;
   background: white;
-  height: 170px;
+  height: 23vh;
   z-index: 0;
   overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #logo {
@@ -89,13 +92,13 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100px;
+  height: 6vh;
 }
 
 #logo img {
   position: relative;
   z-index: -1;
-  margin-top: 20px;
+  margin-top: 40px;
   -webkit-transform: rotate(45deg) scale(0.3);
           transform: rotate(45deg) scale(0.3);
 }
@@ -127,8 +130,12 @@ header {
   color: #1c2c68;
   -webkit-transition: 0.3s linear;
   transition: 0.3s linear;
+  -webkit-transition: -webkit-box-shadow 0.5s linear;
+  transition: -webkit-box-shadow 0.5s linear;
+  transition: box-shadow 0.5s linear;
+  transition: box-shadow 0.5s linear, -webkit-box-shadow 0.5s linear;
   position: relative;
-  margin: 0.5rem;
+  margin: 0 0.8rem;
   padding: 0.6rem;
   font-weight: 600;
   font-size: large;
@@ -140,6 +147,8 @@ header {
 
 .btn:hover {
   color: white;
+  -webkit-box-shadow: inset 20px 20px 14px #182558, inset -20px -20px 14px #203378;
+          box-shadow: inset 20px 20px 14px #182558, inset -20px -20px 14px #203378;
 }
 
 .btn::before {
@@ -173,10 +182,12 @@ header {
   display: -ms-flexbox;
   display: flex;
   width: 100vw;
-  height: 60vh;
+  height: 55vh;
   cursor: -webkit-grab;
   cursor: grab;
   background-position: left;
+  -webkit-box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.62);
+          box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.62);
 }
 
 #accueil:hover img {
@@ -242,11 +253,10 @@ header {
   position: absolute;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
+  background: rgba(0, 0, 0, 0.716);
   right: 0;
   width: 50%;
-  height: 60vh;
-  backdrop-filter: blur(20px) brightness(30%);
-  -webkit-backdrop-filter: blur(20px) brightness(30%);
+  height: 55vh;
 }
 
 @media screen and (max-width: 1093px) {
@@ -329,5 +339,54 @@ header {
   100% {
     letter-spacing: normal;
   }
+}
+
+#scrollDown {
+  display: block;
+  margin: auto;
+  height: 13vh;
+}
+
+main {
+  width: 100%;
+}
+
+.part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 96vh;
+  background: whitesmoke;
+}
+
+.imgMenu img, .lottie {
+  margin: 30px;
+  border: 1px solid #8dba19;
+  padding: 10px;
+  width: 25rem;
+  height: 25rem;
+}
+
+#presentation {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 50px));
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 50px));
+}
+
+#produits {
+  -webkit-clip-path: polygon(0 0, 100% 50px, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 50px, 100% 100%, 0 100%);
+  margin-top: -30px;
+}
+
+#contact {
+  -webkit-clip-path: polygon(0 0, calc(50% - 0.67vh - 8.58vh) 0, 50% calc(4vh + 0.31vh), calc(50% + 0.67vh + 8.58vh) 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, calc(50% - 0.67vh - 8.58vh) 0, 50% calc(4vh + 0.31vh), calc(50% + 0.67vh + 8.58vh) 0, 100% 0, 100% 100%, 0 100%);
+  margin-top: -1vh;
 }
 /*# sourceMappingURL=index.css.map */
