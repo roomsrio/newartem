@@ -1,3 +1,5 @@
+
+// animation de nom Artem dans accueil
 anime({
   targets: "#svgAnim path",
   strokeDashoffset: [anime.setDashoffset, 0],
@@ -6,6 +8,8 @@ anime({
   direction: "alternate",
   loop: true,
 });
+
+// animation de la fenetre transparente name de gauche à droite dans accueil
 
 const accueil = document.getElementById("accueil");
 const name = document.getElementById("name");
@@ -19,3 +23,5 @@ accueil.addEventListener("mousemove", (e) => {
     name.style.left = `calc(${e.pageX}px - 25vw)`;
   }
 });
+
+const navbar = document.querySelector(".navLinks");

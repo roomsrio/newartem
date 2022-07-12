@@ -6,30 +6,57 @@ main {
 
 .part{
     @include center;
-    height: 96vh;
-    background: whitesmoke;
+    height: 100vh;
+    background: #f5f5f5;
+    padding: 5%;
+    clip-path: polygon(0% 0%, 40% 0%,50% 8%, 60% 0%,100% 0%, 100% 99%, 60% 99%,50% 91%, 40% 99%,0% 99%);
+    & p {
+        font-size: large;
+        margin: 30px 0;
+    }
+}
+
+#contact{
+    clip-path: polygon(0% 0%, 40% 0%,50% 8%, 60% 0%,100% 0%, 100% 100%, 0% 100%);
 }
 
 .imgMenu img, .lottie{
     margin: 30px;
     border: 1px solid #8dba19;
   padding: 10px;
-  width: 25rem;
-  height: 25rem;
+  width: 23rem;
+  height: 20rem;
 }
 
-
-#presentation {
-    clip-path: polygon(0 0,100% 0,100% 100%,0 calc(100% - 50px));
+.textMenu {
+    width: 40%;
+    margin: 0 auto;
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
+h2{
+    margin: 0 0 20px 0;
 }
 
-
-#produits{
-    clip-path: polygon(0 0,100% 50px,100% 100%,0 100%);
-    margin-top: -30px;
+.savoir{
+    border: none;
+    font-size: 16px;
+    width: 50%;
+    transition: 0.3s;
+    background: $color2;
+    color: whitesmoke;
+    cursor: pointer;
+    padding: 10px;
+    letter-spacing: 0.2px;
+    border-radius: 5px;
+    box-shadow:  17px 17px 34px #8c8c8c,
+    -17px -17px 34px #ffffff;
+    &:hover{
+        letter-spacing: 0;
+        box-shadow:  5px 5px 10px #c9c9c9,
+        -5px -5px 10px #ffffff;
+            transform: translate(3px, 3px);
+    }
 }
 
-#contact{
-    clip-path: polygon(0 0,calc(50% - 0.67vh - 8.58vh) 0,50% calc(4vh + 0.31vh),calc(50% + 0.67vh + 8.58vh) 0,100% 0,100% 100%,0 100%);
-    margin-top: -1vh;
-}
