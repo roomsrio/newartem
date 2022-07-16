@@ -20,6 +20,8 @@ html {
 
 header {
   height: 32vh;
+  background: -webkit-gradient(linear, left top, right top, color-stop(40%, #1c2c68), color-stop(70%, #8dba19));
+  background: linear-gradient(90deg, #1c2c68 40%, #8dba19 70%);
 }
 
 #link-header {
@@ -82,6 +84,19 @@ header {
           align-items: center;
 }
 
+.stickyHeader {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  height: calc(9vh + 40px);
+}
+
+.stickyNav {
+  height: 60px !important;
+  background: -webkit-gradient(linear, left top, right top, color-stop(40%, #1c2c68), color-stop(70%, #8dba19));
+  background: linear-gradient(90deg, #1c2c68 40%, #8dba19 70%);
+}
+
 #logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -108,6 +123,7 @@ header {
 }
 
 .navLinks {
+  background: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -416,5 +432,141 @@ h2 {
           box-shadow: 5px 5px 10px #c9c9c9, -5px -5px 10px #ffffff;
   -webkit-transform: translate(3px, 3px);
           transform: translate(3px, 3px);
+}
+
+.modal-container {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  -webkit-transition: visibility 0.4s;
+  transition: visibility 0.4s;
+}
+
+.modal-container.active {
+  visibility: visible;
+  z-index: 5;
+}
+
+.overlay {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 1, 0.8);
+  -webkit-transition: opacity 0.4s 0.2s ease-out;
+  transition: opacity 0.4s 0.2s ease-out;
+}
+
+.modal-container.active .overlay {
+  opacity: 1;
+  -webkit-transition: opacity 0.4s ease-out;
+  transition: opacity 0.4s ease-out;
+}
+
+.modal {
+  opacity: 0;
+  width: 95%;
+  max-width: 800px;
+  min-width: 500px;
+  padding: 30px;
+  background: white;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, calc(50% - 50px));
+          transform: translate(-50%, calc(50% - 50px));
+  -webkit-transition: opacity 0.4s ease-out, -webkit-transform 0.4s ease-out;
+  transition: opacity 0.4s ease-out, -webkit-transform 0.4s ease-out;
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out, -webkit-transform 0.4s ease-out;
+}
+
+.modal-container.active .modal {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: opacity 0.4s 0.2s ease-out, -webkit-transform 0.4s 0.2s ease-out;
+  transition: opacity 0.4s 0.2s ease-out, -webkit-transform 0.4s 0.2s ease-out;
+  transition: opacity 0.4s 0.2s ease-out, transform 0.4s 0.2s ease-out;
+  transition: opacity 0.4s 0.2s ease-out, transform 0.4s 0.2s ease-out, -webkit-transform 0.4s 0.2s ease-out;
+}
+
+.close-modal {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background: #ff365e;
+  color: white;
+}
+
+#years-container {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.years {
+  width: 3%;
+  height: 100%;
+  display: block;
+}
+
+.years p {
+  color: #1c2c68;
+  text-align: right;
+  height: 50px;
+}
+
+.circle-container {
+  position: relative;
+  margin: 10px 10px 10px 40px;
+  width: 5%;
+  height: 90%;
+  display: block;
+}
+
+.circle-container::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 90%;
+  background: #1c2c68;
+  -webkit-transform: translate(7px, -110%);
+          transform: translate(7px, -110%);
+}
+
+.circle {
+  height: 15px;
+  width: 15px;
+  margin-bottom: 35px;
+  border-radius: 100px;
+  background: #1c2c68;
+}
+
+.yearsText {
+  display: block;
+  width: 70%;
+  font-size: 13px;
+}
+
+.yearsText p {
+  height: 50px;
+  color: #1c2c68;
+  text-align: justify;
 }
 /*# sourceMappingURL=index.css.map */

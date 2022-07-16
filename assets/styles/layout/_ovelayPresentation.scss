@@ -1,0 +1,117 @@
+.modal-container{
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: visibility 0.4s;
+}
+
+.modal-container.active {
+    visibility: visible;
+    z-index: 5;
+}
+
+.overlay{
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 1, 0.8);
+    transition: opacity 0.4s 0.2s ease-out;
+}
+
+.modal-container.active .overlay{
+    opacity: 1;
+    transition: opacity 0.4s ease-out;
+}
+
+.modal {
+    opacity: 0;
+    width: 95%;
+    max-width: 800px;
+    min-width: 500px;
+    padding: 30px;
+    background: white;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(50% - 50px));
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.modal-container.active .modal{
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.4s 0.2s ease-out, transform 0.4s 0.2s ease-out;
+    }
+
+.close-modal {
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background: #ff365e;
+    color: white;
+}
+
+#years-container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.years {
+    width: 3%;
+    height: 100%;
+    display: block;
+}
+
+.years p {
+    color: $color1;
+    text-align: right;
+    height: 50px;
+    
+} 
+
+.circle-container {
+    position: relative;
+    margin: 10px 10px 10px 40px;
+    width: 5%;
+    height: 90%;
+    display: block;
+    &::after{
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 90%;
+        background: $color1;
+        transform: translate(7px, -110%);
+    }
+}
+
+.circle {
+    height: 15px;
+    width: 15px;
+    margin-bottom: 35px;
+    border-radius: 100px;
+    background: $color1;
+}
+
+.yearsText {
+    display: block;
+    width: 70%;
+    font-size: 13px;
+}
+
+.yearsText p {
+    height: 50px;
+    color: $color1;
+    text-align: justify;
+}

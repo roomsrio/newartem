@@ -1,5 +1,6 @@
 header{
     height: 32vh;
+    background: linear-gradient(90deg, $color1 40%, $color2 70%);
 }
 
 #link-header{
@@ -46,6 +47,19 @@ header{
     align-items: center;
      }
 
+.stickyHeader {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: calc(9vh + 40px);
+}
+
+.stickyNav {
+    height: 60px !important; 
+    background: linear-gradient(90deg, #1c2c68 40%, #8dba19 70%);
+}
+
+
 #logo {
     @include center;
     height: 6vh;
@@ -62,6 +76,7 @@ header{
 }
 
 .navLinks{
+    background: transparent;
     @include center;
     height: 60px;
     @media screen and (max-width: 600px) {

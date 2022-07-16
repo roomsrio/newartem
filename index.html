@@ -14,7 +14,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
-<header>
+<header id="header">
 
     <div id="link-header">
         <div class="item one">
@@ -35,7 +35,7 @@
             <button class="burger">
                 <span class="bar"></span>
             </button>
-            <ul class="navLinks">
+            <ul id="bouzin" class="navLinks">
                 <li class="navLink 1"><a class="btn presentation" href="#presentation">Présentation</a></li>
                 <li class="navLink 2"><a class="btn produits" href="#produits">Nos produits</a></li>
                 <li class="navLink 3"><a class="btn" href="https://pay-pro.monetico.fr/artem/paiementenligne"
@@ -50,6 +50,68 @@
 </header>
 
 <body>
+
+    <!-- overlay des buttons -->
+
+    <div class="modal-container">
+        <div class="overlay modal-trigger"></div>
+        <div class="modal">
+            <button class="close-modal modal-trigger">X</button>
+            <div id="years-container">
+                <div class="years">
+                    <p>1982</p>
+                    <p>1983</p>
+                    <p>1994</p>
+                    <p>1995</p>
+                    <p>1998</p>
+                    <p>2001</p>
+                    <p>2011</p>
+                    <p>20..</p>
+                    <p>20..</p>
+                    <p>20..</p>
+                </div>
+                <div class="circle-container">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+                <div class="yearsText">
+                    <p>M. Bellanger et Sauvaneau quittent la société NERVUS pour créer la SARL ARTEM à Paris (12eme).
+                    </p>
+                    <p>Démarrage de l’activité grâce à un partenaire européen qui accepte de produire des manchons de
+                        boulangerie en laine sur les spécifications d’ARTEM.</p>
+                    <p>Jean marie TOURY prends le contrôle d’ARTEM qui comporte 6 personnes et réalise 6 MF de chiffre
+                        d’affaire. ARTEM devient une SA.</p>
+                    <p>Déménagement d’ARTEM à Torcy, les locaux de Paris ne permettant pas de répondre aux besoins
+                        de développement. Accentuation de la production interne qui prends plus d’importance.</p>
+                    <p>Entrée dans le groupe d’ART-SOCOM spécialisé dans la fabrication de mécanique sur mesure.
+                        Implantation d’un réseau commercial sur toute la France, pour être au plus proche des clients.
+                    </p>
+                    <p>Introduction du premier accessoire mécanique à destination des boulangers, l’enfourneur,
+                        développé et
+                        fabriqué par le groupe.</p>
+                    <p>ARTEM déménage à Montévrain dans des locaux de 1500 m².</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam temporibus quia eligendi veniam
+                        labore
+                        blanditiis.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, ad est. Aperiam perferendis quod
+                        placeat facere cumque sint assumenda numquam.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nobis voluptates quo, facere
+                        nulla
+                        iure!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <section id="accueil">
         <div id="photo-left"><img src="./assets/img/boulangegrand.jpg" alt="photo de boulangerie"></div>
         <div id="photo-right"><img src="./assets/img/textile.jpg" alt="photo de textiles"></div>
@@ -81,10 +143,12 @@
                     molestias atque earum? Maxime necessitatibus harum, velit minima beatae, maiores, debitis non
                     architecto voluptatibus cum deserunt illo iste illum nostrum tempore tempora. Fugit, ut nihil
                     necessitatibus inventore minus eius, fugiat fuga amet iste voluptatum esse assumenda ea!</p>
-                <button class="savoir">Artem au fil du temps</button>
+                <button class="savoir company modal-trigger">Artem au fil du temps</button>
             </div>
         </div>
+
         <div class="separation"></div>
+
         <div id="produits" class="part">
             <div class="textMenu">
                 <h2>La gamme de qualité Artem, plus de 5000 références! </h2>
